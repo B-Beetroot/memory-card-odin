@@ -1,16 +1,55 @@
-# React + Vite
+# Pokémon Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React project built for **The Odin Project**:  
+https://www.theodinproject.com/lessons/node-path-react-new-memory-card
 
-Currently, two official plugins are available:
+This is a simple memory game where the player must click all 12 Pokémon **without clicking the same one twice**. After every click, the cards shuffle, making it harder to remember which ones were already selected.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Purpose of the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This assignment was created to practice **core React concepts**, especially:
 
-## Expanding the ESLint configuration
+### useEffect
+- Fetching Pokémon data from the PokéAPI
+- Running effects only on component mount
+- Avoiding infinite re-renders
+- Separating side effects from UI logic
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### State Management
+- Tracking clicked cards using a Set
+- Updating score and best score
+- Resetting the game when the user clicks a duplicate
+
+### Rendering & Shuffling
+- Re-rendering based on state changes
+- Shuffling cards without causing unnecessary effects
+- Ensuring React updates happen predictably
+
+---
+
+## Key Takeaways
+
+- `useEffect` is for *side effects*, not general logic  
+- Fetching data on mount is a perfect use case for it  
+
+---
+
+## Features
+
+- Fetches 12 Pokémon from PokéAPI
+- Displays each Pokémon with its sprite
+- Shuffles cards after every click
+- Tracks score and best score
+- Resets on duplicate click
+- Win message when all 12 are clicked
+
+---
+
+## Technologies Used
+
+- React  
+- JavaScript (ES6+)  
+- PokéAPI  
+- CSS Grid & Flexbox
